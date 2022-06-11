@@ -1,0 +1,38 @@
+# printing using PRINT()
+my_votes = int(input("How many votes did you get in the election? "))
+total_votes = int(input("What is the total votes in the election? "))
+percentage_votes = (my_votes / total_votes) * 100
+print("I received " + str(percentage_votes)+"% of the total votes.")
+
+# printing using f string
+my_votes = int(input("How many votes did you get in the election? "))
+total_votes = int(input("What is the total votes in the election? "))
+print(f"You received {my_votes / total_votes * 100}% of the total votes.")
+
+# printing dictionary using PRINT()
+counties_dict = {"Arapahoe": 422829, "Denver": 463353, "Jefferson": 432438}
+for county,voters in counties_dict.items(): # defines variables
+    print((county) + " county has " + str(voters) + " registered voters.")  
+
+# printing dictionary using fstring
+counties_dict = {"Arapahoe": 422829, "Denver": 463353, "Jefferson": 432438}
+for county,voters in counties_dict.items(): # defines variables
+    print(f"{county} county has {voters} registered voters.")
+
+# multiline f strings
+candidate_votes = int(input("How many votes did the candidate get in the election?"))
+total_votes = int(input("How many total votes in the election"))
+message_to_candidate = (
+    f"You received {candidate_votes} votes. "
+    f"There were {total_votes} total votes. "
+    f"You received {candidate_votes/total_votes * 100}% of the total votes.") 
+print(message_to_candidate)
+
+# multiline f strings with formatting for precision  f'{value:{width},.{precision}}'
+candidate_votes = int(input("How many votes did the candidate get in the election?"))
+total_votes = int(input("How many total votes in the election"))
+message_to_candidate = (
+    f"You received {candidate_votes:,} votes. "
+    f"There were {total_votes:,} total votes. "
+    f"You received {candidate_votes/total_votes * 100:.2f}% of the total votes.") 
+print(message_to_candidate)

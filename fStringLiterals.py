@@ -34,10 +34,11 @@ for county,voters in counties_dict.items(): # defines variables
     print(f"{county} county has {voters} registered voters.")
 
 # skill drill 3.2.11b
-voting_data = [{"county":"Arapahoe", "registered voters": 422829},
+# IDK why but this wouldn't print until I changed the " in the dictionary key to ' for f-string line
+# however changing the double to single quotes in the first line of the dictionary doesn't matter
+voting_data = [{'county':'Arapahoe', 'registered voters': 422829},
                 {"county":"Denver", "registered voters": 463353}, 
                 {"county":"Jefferson", "registered voters": 432438}]
 for counties_dict in voting_data:
-    print(f"{counties_dict["county"]} county has {counties_dict["registered voters"]} registered voters.")
-
+    print(f"{counties_dict['county']} county has {counties_dict['registered voters']} registered voters.") 
 

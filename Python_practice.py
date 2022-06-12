@@ -106,7 +106,7 @@ voting_data = [{"county":"Arapahoe", "registered voters": 422829},
                 {"county":"Denver", "registered voters": 463353}, 
                 {"county":"Jefferson", "registered voters": 432438}]
 for counties_dict in voting_data:
-    for voters in county_dict.values():
+    for voters in counties_dict.values():
         print(voters)
 
 # get KEY only from a list of dictionaries

@@ -28,11 +28,16 @@ message_to_candidate = (
     f"You received {candidate_votes/total_votes * 100}% of the total votes.") 
 print(message_to_candidate)
 
-# multiline f strings with formatting for precision  f'{value:{width},.{precision}}'
-candidate_votes = int(input("How many votes did the candidate get in the election?"))
-total_votes = int(input("How many total votes in the election"))
-message_to_candidate = (
-    f"You received {candidate_votes:,} votes. "
-    f"There were {total_votes:,} total votes. "
-    f"You received {candidate_votes/total_votes * 100:.2f}% of the total votes.") 
-print(message_to_candidate)
+# skill drill 3.2.11a
+counties_dict = {"Arapahoe": 422829, "Denver": 463353, "Jefferson": 432438}
+for county,voters in counties_dict.items(): # defines variables
+    print(f"{county} county has {voters} registered voters.")
+
+# skill drill 3.2.11b
+voting_data = [{"county":"Arapahoe", "registered voters": 422829},
+                {"county":"Denver", "registered voters": 463353}, 
+                {"county":"Jefferson", "registered voters": 432438}]
+for counties_dict in voting_data:
+    print(f"{counties_dict["county"]} county has {counties_dict["registered voters"]} registered voters.")
+
+

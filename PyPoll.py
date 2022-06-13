@@ -86,7 +86,13 @@ for candidate_name in candidate_votes:
 
     # to do: print out each candidate's name, vote count, percentage votes
     # votes to the terminal
-    #print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+    candidate_results= (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+
+    # print each candidate name, voter count and % to the terminal
+    print(candidate_results)
+    # and save to the election_analysis.txt
+    txt_file.write(candidate_results)
+    # the previous info is not overwritten because of the ending \n above
 
     # determine winning count vote and candidate
     # determing if VOTES is greater than the winning count

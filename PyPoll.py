@@ -60,9 +60,21 @@ with open(file_to_load) as election_data:
                 # make the candidate names the key for {candidate vote} and set count to 0
                 candidate_votes[candidate_name] = 0
 
-            # add votes to each name
+            # add a vote to the candidate's count
             candidate_votes[candidate_name] += 1
             # this loop is complete and the names and total votes for each name have been collected
+
+# save the results to the txt file
+with open (file_to_save,"w") as txt_file:
+    election_results = (
+        f"\nElection Results\n"
+        f"-------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------\n")
+    print(election_results, end="")
+    #save the final vote count to the election_results.txt
+    txt_file.write(election_results)
+
 
 # determine the percentage of total votes for each candidate by looping through the counts
 # iterate through the candidate list
@@ -74,7 +86,7 @@ for candidate_name in candidate_votes:
 
     # to do: print out each candidate's name, vote count, percentage votes
     # votes to the terminal
-    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+    #print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
     # determine winning count vote and candidate
     # determing if VOTES is greater than the winning count
@@ -93,19 +105,19 @@ winning_candidate_summary = (
     f"Winning Percentage: {winning_percentage:.1f}%\n"
     f"-------------------------\n")
 
-print(winning_candidate_summary)
+#print(winning_candidate_summary)
 
 
 
 
     # print candidate name with percentage of votes
-    print(f"{candidate_name}: received {vote_percentage:.2f}% of the vote")
+    #print(f"{candidate_name}: received {vote_percentage:.2f}% of the vote")
 
 
-#print the candidate list
-print(candidate_options)
+# print the candidate list
+#print(candidate_options)
 
 # print the total_votes
-print(total_votes)
+#print(total_votes)
 
-print(candidate_votes)
+#print(candidate_votes)

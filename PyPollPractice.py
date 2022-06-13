@@ -113,3 +113,13 @@ file_to_save = os.path.join("analysis","election_analysis.txt")
 with open(file_to_save,"w") as txt_file:
     # write some data to the file
     txt_file.write("Arapahoe, Denver, Jefferson")
+
+# use \n to create new lines
+import csv
+import os
+# create a filename variable to a direct or indirect path to the file
+file_to_save = os.path.join("analysis","election_analysis.txt")
+# using the WITH statement to open the file as a .txt
+with open(file_to_save,"w") as txt_file:
+    # write some data to the file
+    txt_file.write("Counties In the Election\n------------------------\nArapahoe\nDenver\nJefferson")

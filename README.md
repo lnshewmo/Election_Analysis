@@ -1,40 +1,32 @@
- 
-README.md
-@@ -1,10 +1,33 @@
-# Election_Analysis
-module 3 python
 # Election Analysis
 
-In this project, our final Python script will need to be able to deliver the following information when the script is run: 
-## Project Overview
-A Colorado Board of Elections employee has requested an election audit for a recent local congressional election.
+## Overview of Election Audit
 
-The deliverables are:
- - Total number of votes cast
--  A complete list of candidates who received votes
- - A complete list of candidates who received votes
- - Total number of votes each candidate received
- - Percentage of votes each candidate won
- - The winner of the election based on popular vote
+A Colorado Board of Elections employee requested an election audit for a recent local congressional election.  Ballot data including Ballot #, County and Candidate was supplied in a .csv file.
+
+**The deliverables are:**
+ 1. Total number of votes cast
+ 2. Total number and percentage of votes cast by county
+ 3. The county with the highest voter turnout
+ 4. Total number and percentage of votes cast for each Candidate
+ 5. The winner of the election based on popular vote
 
 ## Resources
-- Data Source: election_results.csv
+- Data Source: **[election_results.csv](https://github.com/lnshewmo/Election_Analysis/blob/main/resources/election_results.csv)**
 - Software: Python 3.9.12, Visual Studio Code 1.68
 
-## Summary
-The analysis of the election show that:
-- There were 369,711 total votes cast
-- The candidates were:
-  - Charles Casper Stockham
-  - Diana DeGette
-  - Raymon Anthony Doane
-- The candidate results were:
-  - Charles Casper Stockham received 23.0% of the vote with 85,213 votes
-  - Diana DeGette received 73.8% of the vote with 272,892 votes
-  - Raymon Anthony Doane received 3.1% of the vote wtih 11,606 votes
-- The winner of the election was:   
-  - Diana DeGette, who received 73.8% of the vote and 272,892 votes
+## Election Audit Results
 
-## Challenge Overview
+### Election Outcomes
+- Total number of votes cast: 369,711
+- Percentage and total number of votes cast by county:
+   - Jefferson: 10.5% (38,855 total votes)
+   - Denver:    82.8% (306,055 total votes) **highest voter turnout**
+   - Arapahoe:   6.7% (24,801 total votes)
+ - Percentage and total number of votes cast by candidate:
+   - Charles Casper Stockham:  23.0% (85,213 total votes)
+   - Diana DeGette:            73.8% (272,892 total votes)  **winner based on popular vote**
+   - Raymon Anthony Doane:      3.1% (11,606 total votes)
 
-## Challenge Summary
+### Python Code:  PyPoll_Challenge.py
+The completed python script is available **[here}(https://github.com/lnshewmo/Election_Analysis/blob/main/PyPoll_Challenge.py)**

@@ -4,7 +4,7 @@
 
 A Colorado Board of Elections employee requested an election audit for a recent local congressional election.  Ballot data including Ballot #, County and Candidate was supplied in a .csv file.
 
-**The deliverables are:**
+**The required deliverables are given as:**
  1. Total number of votes cast
  2. Total number and percentage of votes cast by county
  3. The county with the highest voter turnout
@@ -21,12 +21,21 @@ A Colorado Board of Elections employee requested an election audit for a recent 
 - Total number of votes cast: 369,711
 - Percentage and total number of votes cast by county:
    - Jefferson: 10.5% (38,855 total votes)
-   - Denver:    82.8% (306,055 total votes) **highest voter turnout**
+   - Denver:    82.8% (306,055 total votes)  **\**highest voter turnout\****
    - Arapahoe:   6.7% (24,801 total votes)
  - Percentage and total number of votes cast by candidate:
    - Charles Casper Stockham:  23.0% (85,213 total votes)
-   - Diana DeGette:            73.8% (272,892 total votes)  **winner based on popular vote**
+   - Diana DeGette:            73.8% (272,892 total votes)  **\**winner based on popular vote\****
    - Raymon Anthony Doane:      3.1% (11,606 total votes)
 
 ### Python Code:  PyPoll_Challenge.py
-The completed python script is available **[here}(https://github.com/lnshewmo/Election_Analysis/blob/main/PyPoll_Challenge.py)**
+- The completed python script is available **[here](https://github.com/lnshewmo/Election_Analysis/blob/main/PyPoll_Challenge.py)**
+- Results were also printed to **[election_analysis.txt](https://github.com/lnshewmo/Election_Analysis/blob/main/analysis/election_analysis.txt)**
+- Running PyPoll_Challenge.py script in VS Code gives the following terminal output: ![image PyPoll terminal](/analysis/terminal.png)
+
+## Election Audit Summary
+
+### Future Use
+
+
+

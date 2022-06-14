@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 """PyPoll Homework Challenge Solution."""
 
 # Add our dependencies.
@@ -21,7 +20,6 @@ candidate_votes = {}
 # 1: Create a county list and county votes dictionary.
 county_list = []
 county_votes = {}
-
 
 # Track the winning candidate, vote count and percentage
 winning_candidate = ""
@@ -50,8 +48,7 @@ with open(file_to_load) as election_data:
         candidate_name = row[2]
 
         # 3: Extract the county name from each row.
-        total_county_votes = total_county_votes + 1  #MAYBE
-
+        total_county_votes = total_county_votes + 1  
         county_name = row[1]
 
         # If the candidate does not match any existing candidate add it to
@@ -90,7 +87,7 @@ with open(file_to_save, "w") as txt_file:
         f"Total Votes: {total_votes:,}\n"
         f"-------------------------\n\n"
         f"County Votes:\n")
-    print(election_results) #, end=""
+    print(election_results) 
 
     txt_file.write(election_results)
 
@@ -102,7 +99,7 @@ with open(file_to_save, "w") as txt_file:
         county_percentage = float(county)/float(total_county_votes)*100
 
          # 6d: Print the county results to the terminal.
-        county_results = (f"{county_name}: {county_percentage:.1f}% ({county})\n")
+        county_results = (f"{county_name}: {county_percentage:.1f}% ({county:,})\n")
         print (county_results)
          # 6e: Save the county votes to a text file.
         txt_file.write(county_results)
@@ -118,7 +115,6 @@ with open(file_to_save, "w") as txt_file:
         f"Largest County Turnout: {largest_county_name}\n"
         f"-------------------------\n")
     print(winning_county_summary)
-
 
     # 8: Save the county with the largest turnout to a text file.
     txt_file.write(winning_county_summary)

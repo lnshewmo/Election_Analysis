@@ -1,3 +1,4 @@
+![](https://github.com/lnshewmo/Election_Analysis/blob/main/voting%20banner.jpg)
 # Election Analysis
 
 ## Overview of Election Audit
@@ -35,7 +36,14 @@ A Colorado Board of Elections employee requested an election audit for a recent 
 
 ## Election Audit Summary
 
+The winner of this election, according to popular vote, is Diana DeGette with 73.8% over the vote (272,892 total votes).
+The county with largest election turnout (82.8% of the total ballots and 306,055 of the total votes) is Denver county.
+
 ### Future Use
 
+This script is dynamic enough exactly as it is to support re-use for any election audit of the same type - a unique ballot id, multiple county names and mutiple candidate names - when the required deliverables are the same.  The name and path of the .csv `file_to_load` should be updated, and a new name and path to the `file_to_save` should also be specified.  The output will be in the same format.   The supplied .csv file can contain any number of county names and candidates.  
 
+More broadly, it can also support an analysis where instead of candidate names, any set of ballot initiatives or measures are listed in that column.  
+
+Similarly to County Votes, another demographic variable associated with the ballot could be explored and added to the code in another set of `for` loops.  For example, the party affiliation of the voter is available, the script could be expanded by initializing a counter for `party_vote`.  Subsequent code blocks for this new varible would be added under each section just as the county blocks are setup.  Another `if` statement in the `for row in reader:` loop will extract and manipulate the party data.  To print the additional output, an added `for` loop in front of the section `for county_name in county_votes:` would render the party percentages and turnout.
 
